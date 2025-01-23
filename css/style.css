@@ -1,16 +1,31 @@
 body {
     background-color: #FFFAF5;
     font-family: 'Poppins', serif;
-    color: #5A5A5A;
 }
 
+/* navbar */
 .icon-project {
     width: 34px;
     height: 34px;
 }
 
+a.navbar-brand {
+    color: #5A5A5A;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.navbar ul li a {
+    color: #5A5A5A;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+}
+
 .btn-contact {
     color: white;
+    font-weight: 600;
     border-radius: 6px;
     border: none;
     width: 124px;
@@ -19,3 +34,25 @@ body {
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);
 }
 
+/*home-section*/
+
+.home-section {
+    height: 522px;
+}
+
+.home-first-img,
+.home-second-img {
+    opacity: 0.3;
+    border-radius: 200px;
+    background: #F87661;
+}
+
+.home-first-img {
+    width: 194px;
+    height: 310px;
+}
+
+.home-second-img {
+    width: 279px;
+    height: 446px;
+}
