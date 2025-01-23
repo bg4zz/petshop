@@ -1,0 +1,21 @@
+body {
+    background-color: #FFFAF5;
+    font-family: 'Poppins', serif;
+    color: #5A5A5A;
+}
+
+.icon-project {
+    width: 34px;
+    height: 34px;
+}
+
+.btn-contact {
+    color: white;
+    border-radius: 6px;
+    border: none;
+    width: 124px;
+    height: 44px;
+    background-color: #F87661;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+}
+
