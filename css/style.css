@@ -11,9 +11,8 @@ body {
 }
 
 .container {
-    padding-left: 168px;
-    padding-right: 168px;
-    max-width: 100%;
+    padding: 0;
+    max-width: 80%;
 }
 
 .icon-project {
@@ -35,6 +34,7 @@ a.navbar-brand {
     line-height: 22px;
     padding: 40px 20px 40px 20px;
 }
+
 .btn-contact {
     font-size: 14px;
     line-height: 20px;
@@ -53,13 +53,17 @@ a.navbar-brand {
 /* adap */
 @media (max-width: 992px) {
     .container {
-        padding-left: 16px; /* Сужаем отступы на меньших экранах */
+        padding-left: 16px;
+        /* Сужаем отступы на меньших экранах */
         padding-right: 16px;
     }
+
     .navbar ul li a {
-        padding: 20px 10px; /* Уменьшаем отступы внутри элементов */
+        padding: 20px 10px;
+        /* Уменьшаем отступы внутри элементов */
     }
 }
+
 /* navbar
 div .navbar {
     width: 1112px;
@@ -117,8 +121,8 @@ a.navbar-brand {
 
 .home-section {
     height: 522px;
-    padding-left: 180px;
-    padding-right: 180px;
+    width: 100%;
+    max-width: 80%;
 }
 
 .home-info h1 {
@@ -135,7 +139,7 @@ a.navbar-brand {
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    color: #828282; 
+    color: #828282;
     letter-spacing: -1.1%;
     width: 454px;
     height: 68px;
