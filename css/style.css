@@ -1,3 +1,4 @@
+/* all */
 body {
     background-color: #FFFAF5;
     font-family: 'Poppins', serif;
@@ -5,7 +6,72 @@ body {
 
 /* navbar */
 .navbar {
+    width: 100%;
     padding: 0;
+}
+
+.container {
+    padding-left: 168px;
+    padding-right: 168px;
+    max-width: 100%;
+}
+
+.icon-project {
+    width: 34px;
+    height: 34px;
+}
+
+a.navbar-brand {
+    color: #5A5A5A;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.navbar ul li a {
+    color: #5A5A5A;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 40px 20px 40px 20px;
+}
+.btn-contact {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    background-color: #F87661;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+    border: none;
+    width: 124px;
+    height: 44px;
+    margin-left: 20px;
+}
+
+/* adap */
+@media (max-width: 992px) {
+    .container {
+        padding-left: 16px; /* Сужаем отступы на меньших экранах */
+        padding-right: 16px;
+    }
+    .navbar ul li a {
+        padding: 20px 10px; /* Уменьшаем отступы внутри элементов */
+    }
+}
+/* navbar
+div .navbar {
+    width: 1112px;
+    padding: 0px;
+}
+
+div.navbar {
+    padding: 0px 168px 0 168px;
+}
+
+div.container-fluid {
+    padding: 0px;
 }
 
 .icon-project {
@@ -28,25 +94,62 @@ a.navbar-brand {
     padding: 40px 20px 40px 20px;
 }
 
-.navbar ul li a img{
+.navbar ul li a img {
     margin-left: 10px;
 }
 
 .btn-contact {
-    color: white;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
     font-weight: 600;
+    color: white;
+    background-color: #F87661;
     border-radius: 6px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);
     border: none;
     width: 124px;
     height: 44px;
-    background-color: #F87661;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);
-}
+    padding: 12px 16px 12px 16px;
+} */
 
 /*home-section*/
 
 .home-section {
     height: 522px;
+    padding-left: 180px;
+    padding-right: 180px;
+}
+
+.home-info h1 {
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 64px;
+    width: 418px;
+    height: 128px;
+    padding: 10px 0px 10px 0;
+    margin: 0 0 10px 0;
+}
+
+.home-info p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #828282; 
+    letter-spacing: -1.1%;
+    width: 454px;
+    height: 68px;
+    margin: 0px;
+    padding: 10px 0px 10px 0px;
+}
+
+.home-info .btn-contact {
+    margin-top: 24px;
+}
+
+.home-images {
+    width: 519px;
+    height: 446px;
 }
 
 .home-first-img,
@@ -54,6 +157,7 @@ a.navbar-brand {
     opacity: 0.3;
     border-radius: 200px;
     background: #F87661;
+    padding: 0;
 }
 
 .home-first-img {
@@ -64,4 +168,110 @@ a.navbar-brand {
 .home-second-img {
     width: 279px;
     height: 446px;
+}
+
+/* statistics */
+
+/* .stats-section {
+    background: linear-gradient(180deg, #FF9685 0%, #F87661 100%);
+    border-radius: 14px;
+    height: 196px;
+    margin-left: 180px;
+    margin-right: 180px;
+} */
+
+/* Общий стиль секции */
+.stats-section {
+    width: 100%;
+    padding: 20px 168px;
+    background: linear-gradient(90deg, #FF8761 0%, #FF5A61 100%);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Контейнер */
+.stats-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Элементы статистики */
+.stats-item {
+    text-align: center;
+}
+
+.stats-item h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.stat-number {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+/* Разделитель */
+.divider {
+    width: 1px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 0 20px;
+}
+
+/* Отзыв */
+.testimonial {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.testimonial-image {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.3;
+}
+
+.testimonial-text h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.testimonial-text p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .stats-section {
+        padding: 20px;
+    }
+
+    .stats-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .testimonial {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }

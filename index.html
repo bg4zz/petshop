@@ -16,15 +16,13 @@
 <body>
     <div class="navbar">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img class="icon-project" src="images/project-icon.svg" alt="PetShop icon">PetShop
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img class="icon-project" src="images/project-icon.svg" alt="PetShop icon">PetShop</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-between" id="navbarContent">
-                    <ul class="navbar-nav mb-2 mb-lg-0">
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav d-flex align-items-center">
                         <li class="nav-item">
                             <a class="nav-link" href="#">Home</a>
                         </li>
@@ -41,23 +39,59 @@
                             <a class="nav-link" href="#">Cart</a>
                         </li>
                     </ul>
-                    <button class="btn-contact">Contact us</button>
+                    <button class="btn btn-contact">Contact us</button>
                 </div>
             </div>
         </nav>
     </div>
-    <div class="home-section d-flex">
-        <div class="home-info row">
+    <div class="home-section d-flex justify-content-between align-items-center">
+        <div class="home-info">
             <h1>Your little friend can trust</h1>
             <p>We believe finding a reliable, professional pet sitter should be easy. So we make sure every member of our Family.</p>
             <button class="btn-contact">Contact us</button>
         </div>
-        <div class="home-images col">
+        <div class="home-images row justify-content-between align-items-center">
             <div class="home-first-img"></div>
             <div class="home-second-img"></div>
         </div>
     </div>
-    <div class="footer"></div>
+    <section class="stats-section">
+        <div class="stats-container">
+            <!-- Первая часть: статистика -->
+            <div class="stats-item">
+                <h3>Customers</h3>
+                <p class="stat-number">12788+</p>
+            </div>
+            <div class="stats-item">
+                <h3>Adopted</h3>
+                <p class="stat-number">3832+</p>
+            </div>
+            <div class="stats-item">
+                <h3>Happy</h3>
+                <p class="stat-number">99k+</p>
+            </div>
+    
+            <!-- Разделитель -->
+            <div class="divider"></div>
+    
+            <!-- Вторая часть: отзыв -->
+            <div class="testimonial">
+                <div class="testimonial-image"></div>
+                <div class="testimonial-text">
+                    <h3>Our Testimoni</h3>
+                    <p>We adopted our puppy. Although I was skeptical, everything turned out perfect!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <div class="stats-section d-flex justify-content-between align-items-center">
+        <div class="stats-info">
+            <div><p></p><br><h4></h4></div>
+            <div><p></p><br><h4></h4></div>
+            <div><p></p><br><h4></h4></div>
+        </div>
+        <div class="stats-images"></div>
+    </div> -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
