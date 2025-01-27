@@ -11,9 +11,9 @@ body {
     padding: 0;
 }
 
-.container {
+nav .container {
     padding: 0;
-    max-width: 80%;
+    max-width: 70%;
 }
 
 .icon-project {
@@ -53,7 +53,7 @@ a.navbar-brand {
 
 /* adap */
 @media (max-width: 992px) {
-    .container {
+    nav .container {
         padding-left: 16px;
         padding-right: 16px;
     }
@@ -64,11 +64,11 @@ a.navbar-brand {
 }
 
 /*home-section*/
-
 .home-section {
     height: 522px;
     width: 100%;
-    max-width: 80%;
+    max-width: 70%;
+    padding: 0;
 }
 
 .home-info h1 {
@@ -130,7 +130,7 @@ a.navbar-brand {
 
 .stats-block {
     width: 100%;
-    max-width: 80%;
+    max-width: 70%;
     background: linear-gradient(180deg, #FF9685 0%, #F87661 100%);
     height: 196px;
     border-radius: 14px;
@@ -138,12 +138,11 @@ a.navbar-brand {
 
 .stats-info {
     margin: 0 12px 0 40px;
-    width: 50%;
 }
 
 .stats-content {
+    width: 138px;
     padding: 60px 0 60px 0;
-    width: 33%;
 }
 
 .stats-content:nth-of-type(2) {
@@ -170,10 +169,6 @@ a.navbar-brand {
     letter-spacing: -2.2%;
     font-weight: 600;
     margin: 0;
-}
-
-.stats-testimoni {
-    width: 50%;
 }
 
 .stats-separator {
@@ -203,16 +198,16 @@ a.navbar-brand {
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
-    letter-spacing: -0.6%;
+    letter-spacing: -1.6%;
     margin: 0;
 }
 
 /* services */
-
 .services-section {
     height: 606px;
     width: 100%;
-    max-width: 80%;
+    max-width: 70%;
+    padding: 0;
 }
 
 .services-section h1 {
@@ -303,14 +298,13 @@ a.navbar-brand {
 }
 
 /* warranty */
-
 .warranty-section {
     height: 418px;
 }
 
 .warranty-block {
     width: 100%;
-    max-width: 80%;
+    max-width: 70%;
     border-top: 1px solid #FEE4DF;
     border-bottom: 1px solid #FEE4DF;
 }
@@ -323,7 +317,7 @@ a.navbar-brand {
 }
 
 .warranty-info {
-    width: 40%;
+    width: 45%;
     margin: 48px 0 64px 0;
 }
 
@@ -334,6 +328,7 @@ a.navbar-brand {
     line-height: 24px;
     letter-spacing: -1.1%;
     padding: 10px 0 10px 0;
+    margin: 0;
 }
 
 .warranty-info h3 {
@@ -343,24 +338,26 @@ a.navbar-brand {
     line-height: 44px;
     letter-spacing: -2.2%;
     padding: 10px;
+    margin: 0;
 }
 
 /* about */
-
 .about-section {
     height: 662px;
+    max-width: 100%;
+    width: 70%;
+    padding: 0;
 }
 
 .about-block {
     background: #D9E4E2;
     height: 534px;
-    width: 100%;
     border-radius: 50px;
     padding: 0 94px 0 94px;
 }
 
 .about-info {
-    width: 50%;
+    width: 57%;
 }
 
 .about-info h1 {
@@ -402,7 +399,6 @@ a.navbar-brand {
     border-radius: 200px;
     background: #F87661;
     padding: 0;
-    margin: 0 0 0 96px;
 }
 
 /* appointment */
@@ -415,7 +411,7 @@ a.navbar-brand {
 }
 
 .appointment-info {
-    width: 80%;
+    width: 70%;
     max-width: 100%;
 }
 
@@ -448,8 +444,8 @@ a.navbar-brand {
 .another-section {
     height: 741px;
     width: 100%;
-    max-width: 80%;
-
+    max-width: 70%;
+    padding: 0;
 }
 
 .another-info h1 {
@@ -522,6 +518,9 @@ a.navbar-brand {
 /* social */
 .social-section {
     height: 624px;
+    width: 100%;
+    max-width: 70%;
+    padding: 0;
 }
 
 .social-info h1 {
@@ -552,15 +551,86 @@ a.navbar-brand {
 .social-two-img {
     width: 336px;
     height: 366px;
-    background: #C4C4C4;
+    background: #D9E4E2;
     border-radius: 20px;
 }
 
 .social-four-img {
     width: 151px;
     height: 165px;
-    background-color: #C4C4C4;
+    background-color: #D9E4E2;
     border-radius: 20px;
 }
 
 /* footer */
+
+.footer-section {
+    height: 600px;
+    width: 100%;
+    max-width: 70%;
+    padding: 0;
+    margin-top: 64px;
+}
+
+.footer-block {
+    border-top: 1px solid #FEE4DF;
+    padding: 64px 0 0 0;
+}
+
+.footer-logo,
+.footer-home,
+.footer-pages,
+.footer-contact {
+    gap: 10px;
+}
+
+.footer-logo {
+    width: 28%;
+    color: #42766C;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+
+    h3 {
+        margin: 0;
+        padding: 40px 0 40px 0;
+    }
+
+    p {
+        color: #828282;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: -1.1%;
+    }
+
+    .social-icons {
+        gap: 38px;
+    }
+}
+
+.footer-home h3,
+.footer-pages h3,
+.footer-contact h3 {
+    color: #5A5A5A;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: -1.7%;
+    margin: 0;
+    padding: 40px 20px 40px 20px;
+}
+
+.footer-home a,
+.footer-pages a,
+.footer-contact a {
+    color: #5A5A5A;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -1.1%;
+    padding: 5px 20px 5px 20px;
+}
