@@ -54,68 +54,13 @@ a.navbar-brand {
 @media (max-width: 992px) {
     .container {
         padding-left: 16px;
-        /* Сужаем отступы на меньших экранах */
         padding-right: 16px;
     }
 
     .navbar ul li a {
         padding: 20px 10px;
-        /* Уменьшаем отступы внутри элементов */
     }
 }
-
-/* navbar
-div .navbar {
-    width: 1112px;
-    padding: 0px;
-}
-
-div.navbar {
-    padding: 0px 168px 0 168px;
-}
-
-div.container-fluid {
-    padding: 0px;
-}
-
-.icon-project {
-    width: 34px;
-    height: 34px;
-}
-
-a.navbar-brand {
-    color: #5A5A5A;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 32px;
-}
-
-.navbar ul li a {
-    color: #5A5A5A;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 22px;
-    padding: 40px 20px 40px 20px;
-}
-
-.navbar ul li a img {
-    margin-left: 10px;
-}
-
-.btn-contact {
-    font-size: 14px;
-    line-height: 20px;
-    text-align: center;
-    font-weight: 600;
-    color: white;
-    background-color: #F87661;
-    border-radius: 6px;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);
-    border: none;
-    width: 124px;
-    height: 44px;
-    padding: 12px 16px 12px 16px;
-} */
 
 /*home-section*/
 
@@ -127,6 +72,7 @@ a.navbar-brand {
 
 .home-info h1 {
     font-weight: 700;
+    color: #333333;
     font-size: 52px;
     line-height: 64px;
     width: 418px;
@@ -176,10 +122,9 @@ a.navbar-brand {
 }
 
 /* statistics */
-
 .stats-section {
     height: 324px;
-    
+    color: #FFFFFF;
 }
 
 .stats-block {
@@ -190,11 +135,22 @@ a.navbar-brand {
     border-radius: 14px;
 }
 
-.stats-content {
-    padding: 60px 0 60px 0;
+.stats-info {
+    margin: 0 12px 0 40px;
+    width: 50%;
 }
 
-.stats-content .stats-content-name, .stats-content-num {
+.stats-content {
+    padding: 60px 0 60px 0;
+    width: 33%;
+}
+
+.stats-content:nth-of-type(2) {
+    margin: 0 40px 0 40px;
+}
+
+.stats-content-name,
+.stats-content-num {
     padding: 2px 10px 2px 10px;
     gap: 10px
 }
@@ -202,9 +158,8 @@ a.navbar-brand {
 .stats-content-name {
     font-size: 16px;
     line-height: 24px;
-    letter-spacing: -1.1%;
     font-weight: 400;
-    color: #FFFFFF;
+    letter-spacing: -1.1%;
     margin: 0;
 }
 
@@ -213,6 +168,91 @@ a.navbar-brand {
     line-height: 44px;
     letter-spacing: -2.2%;
     font-weight: 600;
-    color: #FFFFFF;
     margin: 0;
+}
+
+.stats-testimoni {
+    width: 50%;
+}
+
+.stats-separator {
+    width: 1px;
+    height: 74px;
+    background-color: #FFFFFF;
+}
+
+.stats-testimoni img {
+    padding: 46px 10px 46px 10px;
+    margin: 0 36px 0 36px;
+}
+
+.stats-review {
+    margin-right: 46px;
+}
+
+.stats-review h3 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: -1.7%;
+    margin: 0;
+}
+
+.stats-review p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.6%;
+    margin: 0;
+}
+
+/* services */
+
+.services-section {
+    height: 606px;
+    width: 100%;
+    max-width: 80%;
+}
+
+.services-section h1 {
+    color: #333333;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 64px;
+    letter-spacing: -1%;
+    padding: 10px 0 10px 0;
+    margin: 0;
+}
+
+.services-section p {
+    color: #828282;
+    width: 517px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -1.1%;
+    padding: 10px 0 10px 0;
+    margin: 0 0 64px 0;
+}
+
+.services-elem {
+    width: 482px;
+    height: 262px;
+    border-radius: 30px;
+    background: #FEE4DF;
+}
+
+.services-elem button {
+    width: 81px;
+    height: 44px;
+    border-radius: 6px;
+    border: none;
+    box-shadow: 0 0 0 3px rgba(248, 118, 97, 0.2); /* Мягкая внешняя тень */
+    background: #CF6251;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: -0.6%;
+    margin-left: 5px;
 }
