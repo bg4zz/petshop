@@ -51,21 +51,25 @@ a.navbar-brand {
     margin-left: 20px;
 }
 
-/* adaptation */
-@media (max-width: 991px) {
+/* adaptation navbar*/
+@media (max-width: 992px) {
     nav .container {
-        padding-left: 16px;
-        padding-right: 16px;
+        margin-top: 20px;
     }
 
     .navbar ul li a {
-        padding: 20px 10px;
+        padding: 10px 0;
     }
 }
 
-/*home-section*/
+@media (max-width:577px) {
+    .navbar .btn-contact {
+        margin: 0;
+    }
+}
+
+/* home-section */
 .home-section {
-    height: 522px;
     width: 100%;
     max-width: 70%;
     padding: 0;
@@ -76,10 +80,13 @@ a.navbar-brand {
     color: #333333;
     font-size: 52px;
     line-height: 64px;
-    width: 418px;
-    height: 128px;
-    padding: 10px 0px 10px 0;
-    margin: 0 0 10px 0;
+    padding: 10px 0;
+    margin: 0;
+    word-break: break-word;
+}
+
+.home-info h1 span {
+    display: block;
 }
 
 .home-info p {
@@ -87,11 +94,9 @@ a.navbar-brand {
     font-size: 16px;
     line-height: 24px;
     color: #828282;
-    letter-spacing: -1.1%;
-    width: 454px;
-    height: 68px;
-    margin: 0px;
-    padding: 10px 0px 10px 0px;
+    max-width: 454px;
+    margin: 0;
+    padding: 10px 0;
 }
 
 .home-info .btn-contact {
@@ -99,9 +104,8 @@ a.navbar-brand {
 }
 
 .home-images {
-    width: 519px;
-    height: 446px;
-    margin: 0;
+    width: auto;
+    gap: 46px;
 }
 
 .home-first-img,
@@ -109,7 +113,6 @@ a.navbar-brand {
     opacity: 0.3;
     border-radius: 200px;
     background: #F87661;
-    padding: 0;
 }
 
 .home-first-img {
@@ -120,6 +123,74 @@ a.navbar-brand {
 .home-second-img {
     width: 279px;
     height: 446px;
+}
+
+@media (max-width: 1199px) {
+    .home-info h1 {
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+    .home-info p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .home-images {
+        gap: 30px;
+    }
+
+    .home-first-img {
+        width: 160px;
+        height: 256px;
+    }
+
+    .home-second-img {
+        width: 230px;
+        height: 368px;
+    }
+}
+
+@media (max-width: 991px) {
+    .home-info h1 {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    .home-section {
+        padding: 0 15px;
+    }
+
+    .home-images {
+        justify-content-between;
+        gap: 20px;
+    }
+
+    .home-first-img {
+        width: 140px;
+        height: 220px;
+    }
+
+    .home-second-img {
+        width: 200px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .home-images {
+        gap: 15px;
+    }
+
+    .home-first-img {
+        width: 100px;
+        height: 160px;
+    }
+
+    .home-second-img {
+        width: 150px;
+        height: 240px;
+    }
 }
 
 /* statistics */
