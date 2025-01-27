@@ -70,6 +70,7 @@ a.navbar-brand {
 
 /* home-section */
 .home-section {
+    height: 522px;
     width: 100%;
     max-width: 70%;
     padding: 0;
@@ -162,7 +163,6 @@ a.navbar-brand {
     }
 
     .home-images {
-        justify-content-between;
         gap: 20px;
     }
 
