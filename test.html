@@ -1,17 +1,236 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <title>Бесконечный скролл</title>
     <style>
-    
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+            padding: 0;
+            background: #111;
+            color: white;
+            font-family: sans-serif;
+
+            button {
+                width: 200px;
+                height: 50px;
+                margin: 50px 0;
+            }
+        }
+
+        .carousel-track {
+            display: flex;
+            flex-wrap: nowrap;
+            width: 75%;
+            margin: 0 auto;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            position: relative;
+            cursor: grab;
+            height: 200px;
+            user-select: none;
+            scroll-behavior: auto;
+        }
+
+        .card {
+            min-width: 200px;
+            height: 150px;
+            background: #333;
+            color: white;
+            margin: 0 8px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .carousel-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            pointer-events: none;
+            opacity: 0;
+            transition: background-color 0.2s ease, opacity 0.2s ease;
+        }
+
+        .modal.show {
+            display: block;
+            pointer-events: auto;
+            opacity: 1;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            width: 400px;
+            margin: 0 auto;
+            padding: 20px 30px;
+            border-radius: 12px;
+            position: relative;
+            top: -100%;
+            transition: top 0.3s ease;
+        }
+
+        .modal.show .modal-content {
+            top: 15%;
+        }
+
+        .modal.hide .modal-content {
+            top: -100%;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 16px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: #CF6251;
+        }
     </style>
 </head>
 
 <body>
-   
+    <!-- Кнопка для открытия модалки -->
+    <button id="openModalBtn">Открыть модальное окно</button>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Модальное окно</h2>
+            <p>Это простое модальное окно на HTML, CSS и JS.</p>
+        </div>
+    </div>
+
+    <!-- Каруселька -->
+    <div class="carousel-track" id="track">
+        <!-- Карточки -->
+        <div class="card">1</div>
+        <div class="card">2</div>
+        <div class="card">3</div>
+        <div class="card">4</div>
+        <div class="card">5</div>
+        <div class="card">6</div>
+        <div class="card">7</div>
+        <div class="card">8</div>
+        <div class="card">9</div>
+    </div>
+
+    <script>
+        // modal
+        const openBtn = document.getElementById("openModalBtn");
+        const modal = document.getElementById("modal");
+        const closeBtn = modal.querySelector(".close");
+
+        openBtn.addEventListener("click", () => {
+            modal.style.display = "block";
+            requestAnimationFrame(() => {
+                modal.classList.add("show");
+                modal.classList.remove("hide");
+                document.body.style.overflow = "hidden";
+            });
+        });
+
+        function closeModal() {
+            modal.classList.add("hide");
+            modal.classList.remove("show");
+            document.body.style.overflow = "";
+
+            // Ждём завершения анимации выезда
+            setTimeout(() => {
+                modal.style.display = "none";
+            }, 300);
+        }
+
+        closeBtn.addEventListener("click", closeModal);
+
+        window.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+
+
+        // carousel
+        const track = document.getElementById('track');
+
+        const originalCards = Array.from(track.children);
+
+        for (let i = 0; i < 3; i++) {
+            originalCards.forEach(card => track.appendChild(card.cloneNode(true)));
+        }
+
+        const allCards = Array.from(track.children);
+        const setLength = originalCards.length;
+        const oneCard = allCards[0];
+        const cardStyle = getComputedStyle(oneCard);
+        const cardWidth = oneCard.offsetWidth + parseFloat(cardStyle.marginLeft) + parseFloat(cardStyle.marginRight);
+        const cardSetWidth = cardWidth * setLength;
+
+        track.scrollLeft = cardSetWidth;
+
+        let isDown = false;
+        let startX = 0;
+        let scrollLeft = 0;
+
+        track.addEventListener('mousedown', (e) => {
+            isDown = true;
+            startX = e.pageX;
+            scrollLeft = track.scrollLeft;
+            track.style.cursor = 'grabbing';
+        });
+
+        track.addEventListener('mouseleave', () => {
+            isDown = false;
+            track.style.cursor = 'grab';
+        });
+
+        track.addEventListener('mouseup', () => {
+            isDown = false;
+            track.style.cursor = 'grab';
+        });
+
+        track.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX;
+            const walk = (x - startX) * 1.5;
+            track.scrollLeft = scrollLeft - walk;
+        });
+
+        // Проверка перепрыгивания
+        function checkInfiniteScroll() {
+            if (track.scrollLeft <= cardSetWidth * 0.5) { track.scrollLeft += cardSetWidth; } else if (track.scrollLeft >=
+                cardSetWidth * 2.5) {
+                track.scrollLeft -= cardSetWidth;
+            }
+            requestAnimationFrame(checkInfiniteScroll);
+        }
+
+        requestAnimationFrame(checkInfiniteScroll);
+    </script>
 </body>
 
 </html>

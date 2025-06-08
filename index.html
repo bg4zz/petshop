@@ -14,6 +14,13 @@
 </head>
 
 <body>
+    <div class="modal-view" id="modal">
+        <div class="modal-view-content">
+            <span class="close-modal-view">&times;</span>
+            <h2>This is modal view!!!</h2>
+            <p>Work in progress...</p>
+        </div>
+    </div>
     <div class="navbar justify-content-center">
         <nav class="navbar navbar-expand-lg">
             <div class="container">
@@ -32,17 +39,28 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">About</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Services <img src="images/arrow-down.svg" alt="arrow-down"></a>
+                        <li class="nav-item custom-dropdown">
+                            <span class="custom-dropdown-toggle">Services <img src="images/arrow-down.svg"
+                                    alt="arrow-down"></span>
+                            <ul class="custom-dropdown-menu">
+                                <li><a href="#" class="menu-elem">Cleaning</a></li>
+                                <li><a href="#" class="menu-elem">Inspection</a></li>
+                                <li><a href="#" class="menu-elem">Consultation</a></li>
+                            </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pages <img src="images/arrow-down.svg" alt="arrow-down"></a>
+                        <li class="nav-item custom-dropdown">
+                            <span class="custom-dropdown-toggle">Pages <img src="images/arrow-down.svg"
+                                    alt="arrow-down"></span>
+                            <ul class="custom-dropdown-menu">
+                                <li><a href="#" class="menu-elem">Blog</a></li>
+                                <li><a href="#" class="menu-elem">Forum</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Cart</a>
                         </li>
                     </ul>
-                    <button class="btn btn-contact m-sm-0">Contact us</button>
+                    <button class="btn btn-contact m-sm-0 openModalBtn" id="">Contact us</button>
                 </div>
             </div>
         </nav>
@@ -57,7 +75,7 @@
                 We believe finding a reliable, professional pet sitter should be easy.
                 So we make sure every member of our Family.
             </p>
-            <button class="btn btn-contact">Contact us</button>
+            <button class="btn btn-contact openModalBtn">Contact us</button>
         </div>
         <div class="home-images d-flex justify-content-between align-items-center">
             <div class="home-first-img"></div>
@@ -96,7 +114,7 @@
                 our
                 Family.</p>
         </div>
-        <div class="services-elements d-flex">
+        <div class="services-elements d-flex" id="track">
             <div class="services-elem d-flex align-items-center">
                 <div class="services-elem-avatar">
                     <svg width="104" height="104" viewBox="0 0 104 104" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -106,7 +124,7 @@
                 <div class="services-elem-desc">
                     <h3>Dog per visit</h3>
                     <p>We adopted our puppy. Althought I was skeptical, everything turned out perfect!</p>
-                    <button>Details</button>
+                    <button class="openModalBtn">Details</button>
                 </div>
             </div>
             <div class="services-elem elem-red d-flex align-items-center">
@@ -118,7 +136,7 @@
                 <div class="services-elem-desc">
                     <h3>Dog per visit</h3>
                     <p>We adopted our puppy. Althought I was skeptical, everything turned out perfect!</p>
-                    <button>Details</button>
+                    <button class="openModalBtn">Details</button>
                 </div>
             </div>
             <div class="services-elem d-flex align-items-center">
@@ -130,7 +148,7 @@
                 <div class="services-elem-desc">
                     <h3>Cat pet visit</h3>
                     <p>We adopted our puppy. Althought I was skeptical, everything turned out perfect!</p>
-                    <button>Details</button>
+                    <button class="openModalBtn">Details</button>
                 </div>
             </div>
         </div>
@@ -207,19 +225,19 @@
                 <div class="another-elem-img"></div>
                 <h3>Dog toys: How to pick the best</h3>
                 <p>We adopted our puppy</p>
-                <button class="btn btn-primary">Read More</button>
+                <button class="btn btn-primary openModalBtn">Read More</button>
             </div>
             <div class="another-elem col-md-4 col-lg-3">
                 <div class="another-elem-img"></div>
                 <h3>Dog toys: Everything you need</h3>
                 <p>We adopted our puppy</p>
-                <button class="btn btn-primary">Read More</button>
+                <button class="btn btn-primary openModalBtn">Read More</button>
             </div>
             <div class="another-elem col-md-4 col-lg-3">
                 <div class="another-elem-img"></div>
                 <h3>The best cat food</h3>
                 <p>We adopted our puppy</p>
-                <button class="btn btn-primary">Read More</button>
+                <button class="btn btn-primary openModalBtn">Read More</button>
             </div>
             <div class="d-none"></div>
         </div>
@@ -231,7 +249,8 @@
             </h2>
         </div>
 
-        <div class="social-elements justify-content-between flex-column flex-xxl-row align-items-center gap-0 gap-xxl-0">
+        <div
+            class="social-elements justify-content-between flex-column flex-xxl-row align-items-center gap-0 gap-xxl-0">
             <div
                 class="social-left col-12 col-xxl-auto d-flex flex-column flex-xxl-row align-items-center gap-4 mb-4 mb-xxl-0 ">
                 <div class="social-two-img"></div>
@@ -302,6 +321,10 @@
             </div>
         </div>
     </footer>
+
+    <script src="js/modalView.js" defer></script>
+    <script src="js/dropdown.js" defer></script>
+    <script src="js/scroll.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

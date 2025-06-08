@@ -12,8 +12,8 @@ body {
 }
 
 nav .container {
-    padding: 0;
     max-width: 75%;
+    padding: 40px 0;
 }
 
 .icon-project {
@@ -28,12 +28,11 @@ a.navbar-brand {
     line-height: 32px;
 }
 
-.navbar ul li a {
+.nav-link {
     color: #5A5A5A;
     font-weight: 600;
     font-size: 16px;
     line-height: 22px;
-    padding: 40px 20px 40px 20px;
 }
 
 .btn-contact {
@@ -51,19 +50,129 @@ a.navbar-brand {
     margin-left: 20px;
 }
 
+/* dropdown */
+.custom-dropdown-menu {
+    display: none;
+    position: absolute;
+    list-style: none;
+    background-color: #F87661;
+    border-radius: 5px;
+    padding: 10px 0;
+    margin-top: 5px;
+    min-width: 120px;
+    z-index: 10;
+}
+
+.custom-dropdown-toggle {
+    color: #5A5A5A;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 8px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.menu-elem {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    padding-left: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.custom-dropdown-menu.active {
+    display: block;
+}
+
 @media (max-width: 992px) {
     nav .container {
         margin-top: 20px;
     }
 
-    .navbar ul li a {
+    .custom-dropdown-menu {
+        position: static;
+        float: none;
+        box-shadow: none;
+    }
+
+    .nav-link,
+    .custom-dropdown {
         padding: 10px 0;
+    }
+
+    .custom-dropdown-toggle {
+        padding: 0;
+    }
+
+    .menu-elem {
+        padding: 0 22px;
     }
 }
 
 @media (max-width:577px) {
     .navbar .btn-contact {
         margin: 0;
+    }
+}
+
+/* modal view */
+.modal-view {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: black;
+    pointer-events: none;
+    opacity: 0;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.modal-view.show {
+    display: block;
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.modal-view-content {
+    background-color: #fff;
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px 30px;
+    border-radius: 12px;
+    position: relative;
+    top: -100%;
+    transition: top 0.3s ease;
+}
+
+.modal-view.show .modal-view-content {
+    top: 15%;
+}
+
+.modal-view.hide .modal-view-content {
+    top: -100%;
+}
+
+.close-modal-view {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.close-modal-view:hover {
+    color: #CF6251;
+}
+
+@media (max-width: 450px){
+    .modal-view-content{
+        margin: 0 auto;
+        width: 90%;
     }
 }
 
@@ -269,6 +378,12 @@ a.navbar-brand {
     margin: 0;
 }
 
+@media (min-width: 1440px) {
+    .stats-block {
+        justify-content: center !important;
+    }
+}
+
 @media (max-width: 1400px) {
     .stats-block {
         flex-direction: column;
@@ -343,7 +458,12 @@ a.navbar-brand {
 }
 
 .services-elements {
-    max-width: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    cursor: grab;
+    user-select: none;
+    scroll-behavior: auto;
 }
 
 .services-elem {
@@ -428,7 +548,7 @@ a.navbar-brand {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        min-width: 100%;
+        min-width: 95%;
         height: auto;
         padding: 25px
     }
@@ -1006,6 +1126,7 @@ a.navbar-brand {
         height: 100px;
     }
 }
+
 /* footer */
 
 .footer-section {
