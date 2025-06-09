@@ -34,6 +34,11 @@
     margin: 24px 0 0 0;
 }
 
+.home-info button:hover,
+.home-info button:focus {
+  box-shadow: 0 0 0 3px rgba(248, 118, 97, 0.2);
+}
+
 .home-images {
     width: auto;
     gap: 46px;

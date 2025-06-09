@@ -8,6 +8,11 @@
   }
 }
 
+.navbar button:hover,
+.navbar button:focus {
+  box-shadow: 0 0 0 3px rgba(248, 118, 97, 0.2);
+}
+
 nav .container {
   max-width: 75%;
   padding: 40px 0;
