@@ -1,0 +1,126 @@
+/* statistics */
+.stats-section {
+    color: #FFFFFF;
+}
+
+.stats-block {
+    width: 100%;
+    max-width: 75%;
+    background: linear-gradient(180deg, #FF9685 0%, #F87661 100%);
+    border-radius: 14px;
+    padding: 60px 0;
+}
+
+.stats-contents {
+    border-right: 1px solid white;
+}
+
+.stats-contents-customers,
+.stats-contents-adopted,
+.stats-contents-happy {
+    width: 138px;
+}
+
+.stats-contents-customers {
+    margin: 0 40px;
+}
+
+.stats-contents-happy {
+    margin: 0 12px 0 40px;
+}
+
+.stats-contents-name,
+.stats-contents-num {
+    padding: 2px 10px 2px 10px;
+    gap: 10px
+}
+
+.stats-contents-name {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    letter-spacing: -1.1%;
+    margin: 0;
+}
+
+.stats-contents-num {
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -2.2%;
+    font-weight: 600;
+    margin: 0;
+}
+
+.stats-testimoni img {
+    margin: 0 36px 0 36px;
+}
+
+.stats-review {
+    margin-right: 46px;
+}
+
+.stats-review h2 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: -1.7%;
+    margin: 0;
+}
+
+.stats-review p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -1.6%;
+    margin: 0;
+}
+
+@media (min-width: 1440px) {
+    .stats-block {
+        justify-content: center !important;
+    }
+}
+
+@media (max-width: 1400px) {
+    .stats-block {
+        flex-direction: column;
+    }
+
+    .stats-contents {
+        border: none;
+    }
+
+    .stats-testimoni {
+        margin-top: 30px;
+        flex-direction: column;
+        text-align: center;
+
+        img {
+            margin: 0;
+        }
+
+        .stats-review {
+            margin: 30px 0 0 0;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-contents {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .stats-contents-customers,
+    .stats-contents-happy {
+        margin: 0;
+    }
+
+    .stats-contents-adopted {
+        margin: 20px 0;
+    }
+
+    .stats-review p {
+        padding: 0 20px;
+    }
+}

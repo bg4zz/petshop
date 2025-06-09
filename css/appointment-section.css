@@ -1,0 +1,74 @@
+/* appointment */
+.appointment-section {
+    background: linear-gradient(180deg, #5D9388 0%, #42766C 100%);
+    height: 470px;
+    color: #FFFFFF;
+    margin: 133px 0 121px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.appointment-info {
+    width: 75%;
+    max-width: 100%;
+    text-align: left;
+}
+
+.appointment-info h2 {
+    width: 520px;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 64px;
+    letter-spacing: -1%;
+    padding: 10px 0 10px 0;
+    margin: 0 0 14px 0;
+}
+
+.appointment-info p {
+    width: 520px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -1.1%;
+    padding: 10px 0 10px 0;
+    margin: 0 0 14px 0;
+}
+
+.appointment-info button {
+    margin: 0;
+}
+
+@media (max-width: 992px) {
+    .appointment-info h2 {
+        font-size: 36px;
+        line-height: 48px;
+        width: 390px;
+    }
+
+    .appointment-info p {
+        font-size: 14px;
+        line-height: 22px;
+        width: 420px;
+    }
+}
+
+@media (max-width: 768px) {
+    .appointment-info h2 {
+        font-size: 32px;
+        line-height: 40px;
+        width: 80%;
+    }
+
+    .appointment-info p {
+        font-size: 14px;
+        line-height: 22px;
+        width: 80%;
+    }
+}
+
+@media (max-width: 576px) {
+    .appointment-info {
+        width: 70%;
+    }
+}

@@ -1,0 +1,181 @@
+/* all */
+body {
+    background-color: #FFFAF5;
+    font-family: 'Poppins', serif;
+    overflow-x: hidden;
+}
+
+.btn-contact {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    background-color: #F87661;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+    border: none;
+    width: 124px;
+    height: 44px;
+    margin-left: 20px;
+}
+
+/* dropdown */
+.custom-dropdown-menu {
+    display: none;
+    position: absolute;
+    list-style: none;
+    background-color: #F87661;
+    border-radius: 5px;
+    padding: 10px 0;
+    margin-top: 5px;
+    min-width: 120px;
+    z-index: 10;
+}
+
+.custom-dropdown-toggle {
+    color: #5A5A5A;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 8px;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+}
+
+.menu-elem {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    padding: 10px 6px 10px 6px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    user-select: none;
+}
+
+.menu-elem::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    width: 100%;
+    background: black;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+/* Наведение — выезд слева направо */
+.menu-elem:hover::after,
+.menu-elem:focus::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Уход — исчезновение справа налево */
+.menu-elem::after {
+    transition: transform 0.3s ease;
+}
+
+.custom-dropdown:hover .custom-dropdown-menu,
+.custom-dropdown:focus-within .custom-dropdown-menu {
+    display: block;
+}
+
+.custom-dropdown-menu.active {
+    display: block;
+}
+
+@media (max-width: 992px) {
+    nav .container {
+        margin-top: 20px;
+    }
+
+    .custom-dropdown-menu {
+        position: static;
+        float: none;
+        box-shadow: none;
+    }
+
+    .nav-link,
+    .custom-dropdown {
+        padding: 10px 0;
+    }
+
+    .custom-dropdown-toggle {
+        padding: 0;
+    }
+
+    .menu-elem {
+        padding: 0 22px;
+    }
+}
+
+@media (max-width:577px) {
+    .navbar .btn-contact {
+        margin: 0;
+    }
+}
+
+/* modal view */
+.modal-view {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: black;
+    pointer-events: none;
+    opacity: 0;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.modal-view.show {
+    display: block;
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.modal-view-content {
+    background-color: #fff;
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px 30px;
+    border-radius: 12px;
+    position: relative;
+    top: -100%;
+    transition: top 0.3s ease;
+}
+
+.modal-view.show .modal-view-content {
+    top: 15%;
+}
+
+.modal-view.hide .modal-view-content {
+    top: -100%;
+}
+
+.close-modal-view {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.close-modal-view:hover {
+    color: #CF6251;
+}
+
+@media (max-width: 450px) {
+    .modal-view-content {
+        margin: 0 auto;
+        width: 90%;
+    }
+}

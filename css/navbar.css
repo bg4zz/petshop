@@ -1,0 +1,61 @@
+/* navbar */
+.navbar {
+  width: 100%;
+  padding: 0;
+
+  button {
+    margin-left: 10px !important;
+  }
+}
+
+nav .container {
+  max-width: 75%;
+  padding: 40px 0;
+}
+
+.icon-project {
+  width: 34px;
+  height: 34px;
+}
+
+h2.navbar-brand {
+  cursor: default;
+  color: #5A5A5A;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.nav-link {
+  color: #5A5A5A;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  position: relative;
+  display: inline-block;
+}
+
+.nav-item a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: #F87661;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+/* Наведение — выезд слева направо */
+.nav-item a:hover::after,
+.nav-item a:focus::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Уход — исчезновение справа налево */
+.nav-item a::after {
+  transition: transform 0.3s ease;
+}
