@@ -5,7 +5,6 @@ document.addEventListener("click", function (e) {
   const button = e.target.closest(".openModalBtn");
   if (!button) return;
 
-  console.log("click");
   modal.style.display = "block";
   requestAnimationFrame(() => {
     modal.classList.add("show");
